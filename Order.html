@@ -1,0 +1,68 @@
+<html>
+    <head>
+        <title>order</title>
+        <link rel="stylesheet" href="mystyles.css">
+        <link rel="stylesheet" href="bot.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <script>
+            function validation()
+            {
+                var item=document.myform.items.value;
+                if(item==null || item=="")
+                {
+                    alert("Please Select Item");
+                    return false;
+                }
+               return true;
+            }
+        </script>
+    </head>
+    <body background="cake.jpg"class="container">
+        <center>
+            <div class="jum">
+        <nav>
+            <ul>
+                <li><a href="Home.html"> Home </a></li>
+                <li><a  href="About.html"> About </a></li>
+                <li><a href="Menu.html"> Menu </a></li>
+                <li><a href="Signup.html"> Sign Up </a></li>
+                <li><a href="Login.html"> Login </a></li>
+                <li><a href="Order.html"> Order </a></li> 
+                <li><a href="Contact.html">Contact</a></li>          
+                
+            </ul>
+        </nav>
+        <br>
+            </div>
+        </center>
+           
+            <center> 
+            <font size="5"><p style="color: antiquewhite;">You can place your order here.</p><br></font>
+            <br> 
+            
+            <form name="myform" action="confirm.html" onsubmit="return Validation(this)">               
+            <font size="5"><strong style="color: yellow;">Item Name</strong></font><br>
+                <input type="text" name="items" placeholder="Item Name" style="height:50px; width:195px; box-shadow:inset rgb(112, 247, 8) 2px 2px 10px 2px;">
+            <br>
+            <br>
+            <font size="5" style="color: yellow;"><strong> Quantity:</strong></font><br>
+            <input type="number" style="width: 75px; height: 40px; box-shadow:inset rgb(112, 247, 8) 2px 2px 10px 2px ;" name="it" min="1" max="30" step="1" value="1">
+            
+            <br>  
+            <br>
+            <h3 style="color: yellow;"><strong>Address to Order..</strong></h3>
+            <textarea cols="35" rows="3" style="border-radius: 20px; box-shadow:inset rgb(112, 247, 8) 1px 1px 5px 5px ; text-align: center; padding-top: 15px;" placeholder="Address"></textarea>
+            <div class="container"><br>
+                <input type="submit" class="btn btn-primary" value="Order">           
+            </div>
+        </form>
+        
+    </body>
+    <div class="b">
+    <footer>
+        <font size="5">&copy;My Company.All Rights are reserved</font>
+    </footer></div>
+    </center>
+</html>

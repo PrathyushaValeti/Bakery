@@ -1,0 +1,115 @@
+<html>
+    <head>
+        <title>SIGN UP</title>
+        <link rel="stylesheet" href="mystyles.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <script>
+            function loginValidation()
+            {
+                var uname=document.myform.username.value;
+                var uemail=document.myform.mail.value;
+                var phone=document.myform.personal.value;
+                var p1=document.myform.pass.value;
+                var p2=document.myform.pas.value;
+                if(uname==null || uname=="")
+                {
+                alert("Enter valid user name");
+                return false;
+               }
+               if(uemail==null || uemail=="")
+               {
+                alert("Enter mail Id");
+                return false;
+               }
+               if(phone=="")
+               {
+                alert("Enter phone number");
+                return false;
+               }
+               if(p1==""|| p1==null ){
+                    alert("Enter password to create");
+                    return false;
+                }
+                if( p2=="" || p2==null){
+                    alert("Re-Enter password to create");
+                    return false;
+                }
+                if(p1!==p2)
+                {
+                    alert("Enter password correctly");
+                    return false;
+                }
+               const radioButtons=document.getElementsByName('gender');
+                let checkedButton=false;
+                for(let i=0;i<radioButtons.length;i++)
+                {
+                 if(radioButtons[i].checked)
+                {
+                   checkedButton=true;
+                   break;
+               }
+                }
+                if(!checkedButton)
+                {
+                    alert("select gender");
+                    return false;
+                }
+                        
+             return true;
+            }
+        </script>
+    </head>
+    <body background="d4.png" class="container">
+        
+        <nav>
+            <br>
+            <center>
+                <font size="7">
+            <ul>
+         
+              <li><a href="Home.html">Home   </a></li>
+                <li><a href="About.html"> About    </a></li>
+                <li><a href="Signup.html"> Sign Up   </a></li>
+                <li><a href="Login.html"> Login   </a></li>
+                <li><a href="Menu.html"> Menu   </a></li>
+                <li><a href="Contact.html"> Contact</a></li></font>
+            </ul></center>
+        </nav>
+        
+        <form name="myform" action="signedsuccess.html" id="radioForm" onsubmit="return loginValidation(this)">
+            <center><h3>SIGN UP:</h3>
+                <div class="in">    
+            <strong>User Name :</strong> <input type="text" name="username" style="height: 40px; border-radius: 5px;"><br>
+            <br>
+           <strong>Email:</strong><input type="email" name="mail" style="height: 40px; border-radius: 5px;"><br>
+            <br>
+           <strong>Phone Number:</strong><input type="tel" name="personal" id="per1" pattern="[0-9]{10}" title="ten digit number" style="height: 35px; border-radius: 5px;"><br>
+            <br>
+            <input type="password" name="pass" placeholder="Enter password to create" autofocus style="height: 35px; border-radius: 5px;"><br>
+            <input type="password" name="pas" placeholder="Re-Enter password to confirm" style="height: 35px; border-radius: 5px;"><br>  
+             
+           <font size="4"> <strong>Gender:</strong></font><br>
+            <input type="radio" name="gender" value="male"> Male<br>
+            <input type="radio" name="gender" value="female"> Female<br>
+            <br>
+           <strong>Address:</strong><br>
+            <textarea name="mytest" cols="35" row="45" style="height: 60px; border-radius: 5px 5px 5px;">
+                Enter Address..
+            </textarea><br>
+           
+            <div class="container">
+                <input type="submit" class="btn btn-primary btn-lg">           
+            </div>
+        </center>
+            <br>
+          
+        </form>
+        </div>
+        </body>
+        
+        <footer>
+            <center><font size="5">&copy;2024 My company.Allrights are reserved.</font></center>
+        </footer>
+</html>

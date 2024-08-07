@@ -1,0 +1,73 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="mystyles.css">
+        <link rel="stylesheet" href="bot.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+       
+        
+    </head>
+    <body background="p6.png" class="container">
+        <script>
+            function validate()
+            {
+                var name=document.myform.uname.value;
+                var pw=document.myform.password.value;
+                if(name=="" || name==null)
+                {
+                      alert("Enter user name");
+                      return false;
+                }
+                if(pw=="" || pw==null)
+                {
+                    alert("Enter password");
+                    return false;
+                }
+                return true;
+            }
+        
+        </script>
+       
+        <nav>
+            <br>
+            <center>
+                <font size="4">
+            <ul>
+                
+              <li><a href="Home.html"> Home  </a></li>
+              <li><a href="About.html"> About </a></li>
+              <li><a href="Menu.html"> Menu    </a></li>
+              <li><a href="Signup.html"> Sign Up   </a></li>
+              <li><a href="Login.html"> Login   </a></li>
+              <li><a href="order.html"> Order   </a></li>
+              <li><a href="Contact.html"> Contact</a></li></font>
+            </ul></center>
+        </nav><br>
+        <center>
+       
+            <form action="Menu.html" name="myform" onsubmit="return validate(this)">
+               <div class="container">
+                <div class="input-group" style="margin-left: 450px;">
+            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>  
+             <input type="text" name="uname" placeholder="Enter Username" class="form-control" style="width: 200px; flex-direction: column-reverse;"><br></div>
+            <br>
+            
+             <div class="input-group" style="margin-left: 450px;">
+              <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+            <input id="password" style="width: 200px;"type="password" class="form-control" name="password" placeholder="Password">
+            </div>
+            <br>
+            <br></div>
+            
+                <input type="submit" class="btn btn-info">           
+        </div>
+        </form>
+    </center>
+       
+    </body>
+    <div class="b">
+        <footer>
+           <font size=6>&copy;2024   My company.All rights are reserved.</font>
+        </footer></div>
+ </html>
